@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cinzel+Decorative:wght@700;900&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+@import "tailwindcss" source("../");
+
+@theme {
+  --font-display: 'Cinzel', 'Times New Roman', serif;
+  --font-display-deco: 'Cinzel Decorative', 'Times New Roman', serif;
+  --font-body: 'Spectral', Georgia, serif;
+
+  --color-void: #0a0806;
+  --color-ink: #16110d;
+  --color-ink-raised: #1e1710;
+  --color-leather: #4a3220;
+  --color-leather-light: #7a5230;
+  --color-crimson: #6f2029;
+  --color-crimson-bright: #a13847;
+  --color-brass: #b3925c;
+  --color-brass-dim: #7d6640;
+  --color-parchment: #e9dfc7;
+  --color-parchment-dim: #cbbf9f;
+  --color-muted: #a2937c;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-void);
+  color: var(--color-parchment-dim);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Fixed grain overlay for atmosphere; never applied to scrolling containers. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+code {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+::selection {
+  background: var(--color-crimson);
+  color: var(--color-parchment);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-display-deco {
+  font-family: var(--font-display-deco);
+}
+
+.divider-ornate {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.divider-ornate::before,
+.divider-ornate::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-brass-dim), transparent);
+}
+
+.wax-seal {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 32% 28%, var(--color-crimson-bright), var(--color-crimson) 55%, #4a1620 100%);
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.5),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.4),
+    0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+.parchment-card {
+  background:
+    linear-gradient(160deg, var(--color-ink-raised), var(--color-ink) 65%);
+  border: 1px solid var(--color-leather);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.8);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.94; }
+  50% { opacity: 0.82; }
+  55% { opacity: 0.97; }
+}
+
+.candle-flicker {
+  animation: flicker 6s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
