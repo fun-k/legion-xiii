@@ -73,67 +73,6 @@
     }
   }
 
-  /* Drifting embers */
-  if (!reduceMotion) {
-    var canvas = document.createElement("canvas");
-    canvas.id = "ember-canvas";
-    canvas.setAttribute("aria-hidden", "true");
-    document.body.appendChild(canvas);
-
-    var ctx = canvas.getContext("2d");
-    var W = 0, H = 0, embers = [], raf = 0;
-
-    var spawn = function (anywhere) {
-      return {
-        x: Math.random() * W,
-        y: anywhere ? Math.random() * H : H + 12,
-        r: Math.random() * 1.6 + 0.6,
-        vy: -(Math.random() * 0.45 + 0.2),
-        vx: (Math.random() - 0.5) * 0.2,
-        phase: Math.random() * Math.PI * 2,
-        alpha: Math.random() * 0.5 + 0.3,
-        hue: Math.random() < 0.6 ? 20 : 6
-      };
-    };
-
-    var resize = function () {
-      var dpr = Math.min(window.devicePixelRatio || 1, 2);
-      W = window.innerWidth;
-      H = window.innerHeight;
-      canvas.width = W * dpr;
-      canvas.height = H * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      var count = Math.round(Math.min(60, Math.max(22, W / 24)));
-      while (embers.length < count) embers.push(spawn(true));
-      embers.length = count;
-    };
-
-    var tick = function () {
-      ctx.clearRect(0, 0, W, H);
-      for (var i = 0; i < embers.length; i++) {
-        var p = embers[i];
-        p.phase += 0.02;
-        p.x += p.vx + Math.sin(p.phase) * 0.25;
-        p.y += p.vy;
-        if (p.y < -12) { embers[i] = spawn(false); continue; }
-        var a = p.alpha * Math.min(1, p.y / (H * 0.35)) * (0.7 + 0.3 * Math.sin(p.phase * 2));
-        ctx.fillStyle = "hsla(" + p.hue + ", 95%, 55%, " + (a * 0.18).toFixed(3) + ")";
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 3.2, 0, 6.2832); ctx.fill();
-        ctx.fillStyle = "hsla(" + p.hue + ", 95%, 62%, " + a.toFixed(3) + ")";
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.2832); ctx.fill();
-      }
-      raf = requestAnimationFrame(tick);
-    };
-
-    resize();
-    window.addEventListener("resize", resize);
-    document.addEventListener("visibilitychange", function () {
-      cancelAnimationFrame(raf);
-      if (!document.hidden) tick();
-    });
-    tick();
-  }
-
   /* Footer year */
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
@@ -153,6 +92,8 @@
     if (open && cfg.rosterOpenUrl) {
       open.href = cfg.rosterOpenUrl;
       open.hidden = false;
+      var foot = document.getElementById("ledger-foot");
+      if (foot) foot.hidden = false;
     }
   }
 })();
