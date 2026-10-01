@@ -11,6 +11,6 @@
  *                 "Open in a new tab" fallback under the embed.
  */
 window.LEGION_CONFIG = {
-  rosterEmbedUrl: "",
-  rosterOpenUrl: ""
+  rosterEmbedUrl: "https://docs.google.com/spreadsheets/d/1LOpAh6b5tiGO9zlpoyn3fenmly3Thlh8/edit?rm=minimal",
+  rosterOpenUrl: "https://docs.google.com/spreadsheets/d/1LOpAh6b5tiGO9zlpoyn3fenmly3Thlh8/edit"
 };
