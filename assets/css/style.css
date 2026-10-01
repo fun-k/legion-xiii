@@ -564,6 +564,7 @@ p { margin: 0 0 1em; }
 .section-head.center .lede { margin-inline: auto; }
 .section-head h2 + .lede { margin-top: 1rem; }
 #legion .section-head { margin-bottom: 0; }
+#legion h2 { font-size: clamp(1.15rem, 1rem + 0.9vw, 1.65rem); font-weight: 400; letter-spacing: 0.16em; }
 /* long-form text under "A House of Record": left-aligned paragraphs in a readable column */
 .house-text { max-width: 68ch; text-align: left; }
 .house-text p { margin: 0 0 1.25em; }
