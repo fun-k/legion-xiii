@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personnel Roster — Legion XIII</title>
+  <meta name="description" content="The Legion XIII personnel roster for the Imperial Legion on Keizaal Online.">
+  <meta name="theme-color" content="#0a0807">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Legion XIII — home">
+        <img src="assets/img/emblem.svg" alt="" width="20" height="38">
+        <span>Legion XIII</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#high-command">High Command</a></li>
+          <li><a href="archives.html">Archives</a></li>
+          <li><a class="nav-cta" href="roster.html" aria-current="page">Roster</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Personnel</span>
+        <h1>The Roster</h1>
+        <p class="lede">The Legion's register of serving personnel. Complete the form below to be entered into the roll.</p>
+      </div>
+    </section>
+
+    <div class="container roster-wrap">
+      <div class="ledger">
+        <!-- The embed URL is set in assets/js/config.js -->
+        <iframe id="roster-frame" title="Legion XIII personnel roster" loading="lazy" hidden>
+          Your browser cannot display the embedded roster. Use the link below to open it in a new tab.
+        </iframe>
+
+        <div class="ledger-empty" id="ledger-empty">
+          <div>
+            <h2>Roster not yet connected</h2>
+            <p>Add the Google Form or Sheets embed link to <code>rosterEmbedUrl</code> in <code>assets/js/config.js</code> and the roster will appear here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ledger-foot">
+        <p>Having trouble viewing the roster? Open it in its own tab instead.</p>
+        <a class="btn" id="roster-open" href="#" target="_blank" rel="noopener noreferrer" hidden>Open in a new tab</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand"><img src="assets/img/emblem.svg" alt="" width="28" height="52"></div>
+      <p class="footer-motto">Long live the Emperor, Long live the Empire</p>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#high-command">High Command</a></li>
+        <li><a href="archives.html">Archives</a></li>
+        <li><a href="roster.html">Roster</a></li>
+      </ul>
+      <p class="fine">&copy; <span id="year">2026</span> Legion XIII. A fan-made community site for the Keizaal Online roleplay server. The Elder Scrolls and Skyrim are trademarks of Bethesda Softworks LLC; this site is not affiliated with or endorsed by Bethesda.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

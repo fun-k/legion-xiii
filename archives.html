@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archives — Legion XIII</title>
+  <meta name="description" content="The Legion XIII archive: the Lex Imperii and other documents of the Imperial Legion on Keizaal Online.">
+  <meta name="theme-color" content="#0a0807">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Legion XIII — home">
+        <img src="assets/img/emblem.svg" alt="" width="20" height="38">
+        <span>Legion XIII</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#high-command">High Command</a></li>
+          <li><a href="archives.html" aria-current="page">Archives</a></li>
+          <li><a class="nav-cta" href="roster.html">Roster</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Records of the Legion</span>
+        <h1>The Archives</h1>
+        <p class="lede">Documents of lasting importance to Legion XIII, preserved for the reference of every legionary.</p>
+      </div>
+    </section>
+
+    <div class="container archive-layout">
+
+      <!--
+        HOW TO ADD A DOCUMENT
+        1. Add a <li><a href="#your-id">Title</a></li> to the catalogue below.
+        2. Copy the <article class="manuscript"> block, give it a unique id, and replace the text.
+      -->
+      <aside class="catalogue" aria-label="Document catalogue">
+        <h2>Catalogue</h2>
+        <ul>
+          <li><a href="#lex-imperii">Lex Imperii</a></li>
+          <li><span class="soon">Further documents to be archived</span></li>
+        </ul>
+      </aside>
+
+      <div class="documents">
+
+        <article class="manuscript" id="lex-imperii" aria-labelledby="lex-title">
+          <header class="doc-head">
+            <div class="seal" aria-hidden="true">XIII</div>
+            <h2 id="lex-title">Lex Imperii</h2>
+            <p class="subtitle">The law of the Empire, as upheld by Legion XIII</p>
+            <ul class="doc-meta">
+              <li><b>Issued by</b>High Command</li>
+              <li><b>Applies to</b>All members of the Legion</li>
+            </ul>
+          </header>
+
+          <div class="doc-body">
+            <!-- TODO: replace the placeholder content below with the ratified text of the Lex Imperii. -->
+            <div class="notice">
+              <strong>Placeholder text.</strong> The articles below show the layout only. Replace them with the ratified text of the Lex Imperii by editing <code>archives.html</code>.
+            </div>
+
+            <p>[Preamble. Paste the opening declaration of the Lex Imperii here.]</p>
+
+            <section class="article">
+              <h3><span class="num">I</span> [Article title]</h3>
+              <p>[Text of the first article.]</p>
+            </section>
+
+            <section class="article">
+              <h3><span class="num">II</span> [Article title]</h3>
+              <p>[Text of the second article.]</p>
+              <ol>
+                <li>[Clause one.]</li>
+                <li>[Clause two.]</li>
+              </ol>
+            </section>
+
+            <section class="article">
+              <h3><span class="num">III</span> [Article title]</h3>
+              <p>[Text of the third article.]</p>
+            </section>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand"><img src="assets/img/emblem.svg" alt="" width="28" height="52"></div>
+      <p class="footer-motto">Long live the Emperor, Long live the Empire</p>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#high-command">High Command</a></li>
+        <li><a href="archives.html">Archives</a></li>
+        <li><a href="roster.html">Roster</a></li>
+      </ul>
+      <p class="fine">&copy; <span id="year">2026</span> Legion XIII. A fan-made community site for the Keizaal Online roleplay server. The Elder Scrolls and Skyrim are trademarks of Bethesda Softworks LLC; this site is not affiliated with or endorsed by Bethesda.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
