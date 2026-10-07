@@ -11,16 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script>(function(d){d.classList.add("js");try{if(sessionStorage.getItem("l13-splash"))d.classList.add("no-splash");}catch(e){}})(document.documentElement);</script>
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <div class="loading-screen" id="loader" aria-hidden="true">
-    <div class="splash-mark"><img src="assets/img/emblem.svg" alt="" width="40" height="74"></div>
-    <div class="splash-title">Legion <span class="rn">XIII</span></div>
-    <p class="splash-sub">Imperial Legion</p>
-    <div class="splash-bar"><span></span></div>
-    <p class="splash-quote">Long live the Emperor, Long live the Empire</p>
-  </div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -74,9 +67,8 @@
     <section class="section" id="legion">
       <div class="container">
         <div class="section-head center reveal">
-          <h2>By mandate of the Ruby Throne</h2>
           <div class="lede house-text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p><span class="crimson">The 13th Legion</span> is an Imperial military formation serving under the authority of <span class="crimson">Emperor Orenius Idolusius</span>. The Legion serves as an organized military force of the Empire carrying out Imperial Orders, defending Imperial interests, and maintaining order wherever it is deployed.</p>
           </div>
         </div>
       </div>
@@ -194,7 +186,7 @@
       <div class="container reveal">
         <h2>Take the Oath</h2>
         <p class="lede">Join the Legion at the nearest garrison.</p>
-        <a class="btn btn--primary" href="roster.html">Go to the Roster</a>
+        <button class="btn btn--primary" type="button" data-open-oath aria-haspopup="dialog" aria-controls="oath-modal">Read the Oath</button>
       </div>
     </section>
   </main>
@@ -213,6 +205,19 @@
       <p class="fine">&copy; <span id="year">2026</span> Legion XIII. A fan-made community site for the Keizaal Online roleplay server. The Elder Scrolls and Skyrim are trademarks of Bethesda Softworks LLC; this site is not affiliated with or endorsed by Bethesda.</p>
     </div>
   </footer>
+
+  <!-- THE OATH (opened by the "Read the Oath" button) -->
+  <dialog class="modal" id="oath-modal" aria-labelledby="oath-title">
+    <div class="modal-inner">
+      <button class="modal-close" type="button" data-close aria-label="Close the oath">&times;</button>
+      <h2 id="oath-title">The Legion Oath of Service</h2>
+      <p class="oath-note">Spoken after blessing by one of the Eight Divines</p>
+      <blockquote class="oath-text">
+        <p>&ldquo;I do solemnly swear to uphold the laws of the Empire. Before the Eight Divines and under the authority of the Ruby Throne, I bind my life and loyalty to the Empire of Tamriel and its Legion. I will obey the lawful commands of my officers, stand my post without fear, and fight the enemies of order, be they rebel, traitor, or invader. I swear to protect the citizens of the Empire, preserve peace and unity in its provinces, and serve with discipline, honor, and resolve, even unto death. By this oath, my life is given to the Legion, until my last breath, dismissed by those above me, or the end of the world. All hail the Empire, All hail the Emperor!&rdquo;</p>
+      </blockquote>
+      <p class="oath-after">Upon completion of this oath, the recruit is recognized as a <strong>Legionary of the Empire</strong>.</p>
+    </div>
+  </dialog>
 
   <script src="assets/js/main.js"></script>
 </body>
