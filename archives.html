@@ -11,16 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script>(function(d){d.classList.add("js");try{if(sessionStorage.getItem("l13-splash"))d.classList.add("no-splash");}catch(e){}})(document.documentElement);</script>
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <div class="loading-screen" id="loader" aria-hidden="true">
-    <div class="splash-mark"><img src="assets/img/emblem.svg" alt="" width="40" height="74"></div>
-    <div class="splash-title">Legion <span class="rn">XIII</span></div>
-    <p class="splash-sub">Imperial Legion</p>
-    <div class="splash-bar"><span></span></div>
-    <p class="splash-quote">Long live the Emperor, Long live the Empire</p>
-  </div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -37,6 +30,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html#high-command">High Command</a></li>
           <li><a href="archives.html" aria-current="page">Archives</a></li>
+          <li><a href="hall-of-honor.html">Hall of Honor</a></li>
           <li><a class="nav-cta" href="roster.html">Roster</a></li>
         </ul>
       </nav>
@@ -62,50 +56,82 @@
         <h2>Catalogue</h2>
         <ul>
           <li><a href="#lex-imperii">Lex Imperii</a></li>
+          <li><a href="#ranking-handbook">Ranking Handbook</a></li>
+          <li><a href="#blue-book">The Blue Book</a></li>
+          <li><a href="#imperial-truth">The Imperial Truth</a></li>
+          <li><a href="#fto-sop">FTO Standard Operating Procedures</a></li>
+          <li><a href="#recruiters-handbook">Recruiter&rsquo;s Handbook</a></li>
           <li><span class="soon">Further documents to be archived</span></li>
         </ul>
       </aside>
 
       <div class="documents">
 
-        <article class="manuscript" id="lex-imperii" aria-labelledby="lex-title">
+        <article class="manuscript manuscript--link" id="lex-imperii" aria-labelledby="lex-title">
           <header class="doc-head">
             <h2 id="lex-title">Lex Imperii</h2>
             <p class="subtitle">The law of the Empire, as upheld by the Legion</p>
-            <ul class="doc-meta">
-              <li><b>Issued by</b>High Command</li>
-              <li><b>Applies to</b>All members of the Legion</li>
-            </ul>
             <a class="btn btn--primary" href="https://docs.google.com/document/d/16qv0PUn6ABUVHRPtMsRUjnyfXCw2DT9xmdpZ8k0Rxsk/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Read the Lex Imperii</a>
           </header>
+        </article>
 
-          <div class="doc-body">
-            <!-- TODO: replace the placeholder content below with the ratified text of the Lex Imperii. -->
-            <div class="notice">
-              <strong>Placeholder text.</strong> The articles below show the layout only. Replace them with the ratified text of the Lex Imperii by editing <code>archives.html</code>.
-            </div>
+        <article class="manuscript manuscript--link" id="ranking-handbook" aria-labelledby="handbook-title">
+          <header class="doc-head">
+            <h2 id="handbook-title">Legion Ranking Handbook</h2>
+            <p class="subtitle">The official guide on ranks, responsibilities, and regulations in the Legion</p>
+            <!--
+            <ul class="doc-meta">
+              <li><b>Covers</b>Ranks, responsibilities and regulations</li>
+            </ul>
+            -->
+            <a class="btn btn--primary" href="https://docs.google.com/document/d/1-vpYcFBrZIqNVCL2fZdhcKP-LHlYjmCjMR3yWPTyWq8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Read the Ranking Handbook</a>
+          </header>
+        </article>
 
-            <p>[Preamble. Paste the opening declaration of the Lex Imperii here.]</p>
+        <article class="manuscript manuscript--link" id="blue-book" aria-labelledby="bluebook-title">
+          <header class="doc-head">
+            <h2 id="bluebook-title">The Blue Book</h2>
+            <p class="subtitle">A quick-reference guide for Legion personnel</p>
+            <ul class="doc-meta">
+              <li><b>Author</b>Legionnaire Crastus Iron</li>
+              <!--<li><b>Covers</b>Commonly asked questions, established limitations, permissions, responsibilities and standards of conduct</li>-->
+            </ul>
+            <a class="btn btn--primary" href="https://docs.google.com/document/d/1A0qM85YNmU6q3wl9oD0K-NUx13wsHYd79YjFTx0lUWk/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Read The Blue Book</a>
+          </header>
+        </article>
 
-            <section class="article">
-              <h3><span class="num">I</span> [Article title]</h3>
-              <p>[Text of the first article.]</p>
-            </section>
+        <article class="manuscript manuscript--link" id="imperial-truth" aria-labelledby="truth-title">
+          <header class="doc-head">
+            <h2 id="truth-title">The Imperial Truth</h2>
+            <p class="subtitle">A doctrinal volume on why the Empire exists and why order, loyalty and discipline sustain it.</p>
+            <ul class="doc-meta">
+              <li><b>Author</b>Centurion Cornelius Dorian</li>
+            </ul>
+            <a class="btn btn--primary" href="https://docs.google.com/document/d/1rP7aDBAZ1Wgntl1xLdr3BkG1BzQ1OmFjxU8fLiF3prs/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Read The Imperial Truth</a>
+          </header>
+        </article>
 
-            <section class="article">
-              <h3><span class="num">II</span> [Article title]</h3>
-              <p>[Text of the second article.]</p>
-              <ol>
-                <li>[Clause one.]</li>
-                <li>[Clause two.]</li>
-              </ol>
-            </section>
+        <article class="manuscript manuscript--link" id="fto-sop" aria-labelledby="fto-title">
+          <header class="doc-head">
+            <h2 id="fto-title">FTO Standard Operating Procedures</h2>
+            <p class="subtitle">Establishes the minimum training standard expected of Field Training Officers (FTOs)</p>
+            <ul class="doc-meta">
+              <li><b>Author</b>Decanus Dawndremar Heartseeker</li>
+              <!--<li><b>Covers</b>Standardized training from Recruit through Auxiliary, preparing members for Legionnaire readiness</li>-->
+            </ul>
+            <a class="btn btn--primary" href="https://docs.google.com/document/d/1QbMCuZ3o7G9Dqywsyg_nyCeTGLdZSTAW3kRfEi-BjFk/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Read the FTO Procedures</a>
+          </header>
+        </article>
 
-            <section class="article">
-              <h3><span class="num">III</span> [Article title]</h3>
-              <p>[Text of the third article.]</p>
-            </section>
-          </div>
+        <article class="manuscript manuscript--link" id="recruiters-handbook" aria-labelledby="recruiter-title">
+          <header class="doc-head">
+            <h2 id="recruiter-title">Recruiter&rsquo;s Handbook</h2>
+            <p class="subtitle">Details the standard for onboarding a recruit into the Legion</p>
+            <ul class="doc-meta">
+              <li><b>Author</b>Forms-the-Wall</li>  
+            </ul>
+            <a class="btn btn--primary" href="https://docs.google.com/document/d/1FOy0qu3Y3WCzGOvfGkIS9FyJHhy6ysghgdP3GQu0BHo/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Read the Recruiter&rsquo;s Handbook</a>
+          </header>
         </article>
 
       </div>
@@ -120,6 +146,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#high-command">High Command</a></li>
         <li><a href="archives.html">Archives</a></li>
+        <li><a href="hall-of-honor.html">Hall of Honor</a></li>
         <li><a href="roster.html">Roster</a></li>
       </ul>
       <p class="fine">&copy; <span id="year">2026</span> Legion XIII. A fan-made community site for the Keizaal Online roleplay server. The Elder Scrolls and Skyrim are trademarks of Bethesda Softworks LLC; this site is not affiliated with or endorsed by Bethesda.</p>

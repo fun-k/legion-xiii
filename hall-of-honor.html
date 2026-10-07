@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hall of Honor — Legion XIII</title>
+  <meta name="description" content="The Legion XIII Hall of Honor: Legionnaires who have given great service to the Legion and the Empire, and the Fallen Heroes we remember.">
+  <meta name="theme-color" content="#0a0807">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Legion XIII — home">
+        <img src="assets/img/emblem.svg" alt="" width="20" height="38">
+        <span>Legion XIII</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#high-command">High Command</a></li>
+          <li><a href="archives.html">Archives</a></li>
+          <li><a href="hall-of-honor.html" aria-current="page">Hall of Honor</a></li>
+          <li><a class="nav-cta" href="roster.html">Roster</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <h1>Hall of Honor</h1>
+        <p class="lede">Legionnaires whose service has brought honor to the Legion and the Empire, and the Fallen Heroes who gave everything.</p>
+      </div>
+    </section>
+
+    <div class="container hall-notice" hidden>
+      <!--
+        HOW TO EDIT THIS PAGE
+        Honored Legionnaires: copy a <article class="dossier"> block for each person.
+        Fallen Heroes: copy a <article class="memorial-entry"> block for each person.
+        Remove this notice once the placeholder Honored Legionnaires have been replaced.
+      -->
+      <div class="notice">
+        <strong>Placeholder entries.</strong> The Honored Legionnaires below show the layout only. Replace them with real entries by editing <code>hall-of-honor.html</code>, then delete this notice.
+      </div>
+    </div>
+
+    <!-- HONORED LEGIONNAIRES -->
+    <section class="section" id="honored">
+      <div class="container">
+        <div class="section-head center reveal">
+          <h2>Honored Legionnaires</h2>
+          <p class="lede">Those who have given the most to the Legion and to the Empire it serves.</p>
+        </div>
+
+        <!-- Hidden until there are real entries: remove the "hidden" attribute to show the cards again. -->
+        <div class="honor-grid" hidden>
+          <article class="dossier reveal">
+            <p class="rank">[Rank]</p>
+            <h3>[Legionnaire name]</h3>
+            <p class="role">[Commendation or title]</p>
+            <p class="citation">[A short citation describing this Legionnaire's service to the Legion and the Empire.]</p>
+          </article>
+          <article class="dossier reveal" data-delay="1">
+            <p class="rank">[Rank]</p>
+            <h3>[Legionnaire name]</h3>
+            <p class="role">[Commendation or title]</p>
+            <p class="citation">[A short citation describing this Legionnaire's service to the Legion and the Empire.]</p>
+          </article>
+          <article class="dossier reveal" data-delay="2">
+            <p class="rank">[Rank]</p>
+            <h3>[Legionnaire name]</h3>
+            <p class="role">[Commendation or title]</p>
+            <p class="citation">[A short citation describing this Legionnaire's service to the Legion and the Empire.]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-rule" aria-hidden="true"></div>
+
+    <!-- FALLEN HEROES -->
+    <section class="section fallen" id="fallen">
+      <div class="container">
+        <div class="section-head center reveal">
+          <h2>Fallen Heroes</h2>
+          <p class="lede">They gave their lives in the service of the Legion and the Empire. Their names are kept here so that they are never forgotten.</p>
+        </div>
+
+        <div class="memorial">
+          <article class="memorial-entry reveal">
+            <h3>Marcus Boarguard</h3>
+            <p class="memorial-meta">Centurion</p>
+          </article>
+          <article class="memorial-entry reveal" data-delay="1">
+            <h3>Valentia Decinia</h3>
+            <p class="memorial-meta">Decanus</p>
+          </article>
+          <article class="memorial-entry reveal">
+            <h3>Conoch Dreadhorn</h3>
+            <p class="memorial-meta">Acolyte</p>
+          </article>
+          <article class="memorial-entry reveal" data-delay="1">
+            <h3>Oskar Engstrom</h3>
+            <p class="memorial-meta">Tribune</p>
+          </article>
+          <article class="memorial-entry reveal">
+            <h3>Scipio &ldquo;Old Scipio&rdquo; Seceganus</h3>
+            <p class="memorial-meta">Tribune</p>
+          </article>
+          <article class="memorial-entry reveal" data-delay="1">
+            <h3>Varoneth</h3>
+            <p class="memorial-meta">Decanus</p>
+          </article>
+        </div>
+
+        <p class="fallen-closing reveal">They are not forgotten.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-brand"><img src="assets/img/emblem.svg" alt="" width="28" height="52"></div>
+      <p class="footer-motto">Long live the Emperor, Long live the Empire</p>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#high-command">High Command</a></li>
+        <li><a href="archives.html">Archives</a></li>
+        <li><a href="hall-of-honor.html">Hall of Honor</a></li>
+        <li><a href="roster.html">Roster</a></li>
+      </ul>
+      <p class="fine">&copy; <span id="year">2026</span> Legion XIII. A fan-made community site for the Keizaal Online roleplay server. The Elder Scrolls and Skyrim are trademarks of Bethesda Softworks LLC; this site is not affiliated with or endorsed by Bethesda.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -11,16 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script>(function(d){d.classList.add("js");try{if(sessionStorage.getItem("l13-splash"))d.classList.add("no-splash");}catch(e){}})(document.documentElement);</script>
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <div class="loading-screen" id="loader" aria-hidden="true">
-    <div class="splash-mark"><img src="assets/img/emblem.svg" alt="" width="40" height="74"></div>
-    <div class="splash-title">Legion <span class="rn">XIII</span></div>
-    <p class="splash-sub">Imperial Legion</p>
-    <div class="splash-bar"><span></span></div>
-    <p class="splash-quote">Long live the Emperor, Long live the Empire</p>
-  </div>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -37,6 +30,7 @@
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="index.html#high-command">High Command</a></li>
           <li><a href="archives.html">Archives</a></li>
+          <li><a href="hall-of-honor.html">Hall of Honor</a></li>
           <li><a class="nav-cta" href="roster.html">Roster</a></li>
         </ul>
       </nav>
@@ -50,10 +44,12 @@
       <div class="hero-torch" aria-hidden="true"></div>
 
       <div class="hero-inner">
-        <img class="hero-emblem" src="assets/img/emblem.svg" alt="" width="90" height="170">
+        <div class="hero-sigil">
+          <img class="hero-emblem" src="assets/img/emblem-gold.svg" alt="" width="90" height="170">
+        </div>
         <p class="motto">Long live the Emperor, Long live the Empire</p>
         <h1 id="hero-title">Legion <span class="numeral">XIII</span></h1>
-        <p class="hero-tag">Moonshadow</p>
+        <p class="hero-subtitle">The Imperial Legion &mdash; Moonshadow</p>
         <div class="hero-actions">
           <a class="btn btn--primary" href="roster.html">
             Personnel Roster
@@ -65,16 +61,14 @@
       </div>
     </section>
 
+    <div class="section-rule" aria-hidden="true"></div>
+
     <!-- THE LEGION -->
     <section class="section" id="legion">
       <div class="container">
         <div class="section-head center reveal">
-          <h2>By mandate of the Ruby Throne</h2>
           <div class="lede house-text">
-            <p>For twenty-five years the Imperial Province of Skyrim has stood without an active Imperial threat even, and over that time the Imperial Law has started to crack, be it from poor leadership, or influx of those who wish ill upon the Empire. That changes now.</p>
-            <p>The 13th Legion has been assigned to the Imperial Province of Skyrim under the careful eye of Governor Torg, and Legate Lucius Acacius. The Legion now stands as both a sign of peace, but also a warning of action. The Imperial Law will be enforced once more, and the Imperial Province of Skyrim’s chaos shall be crushed.</p>
-            <p class="verse">It was the Empire that brought unity to Tamriel<br>The Empire that crushed the Oblivion Crisis<br>And the Empire that endeavors for peace across all of Tamriel</p>
-            <p>Now the question is this? Where do you stand when all is settled? Will you become a forgotten story of what was? Or will you join the 13th Legion to become a protector of not only Skyrim, but all of Tamriel.</p>
+            <p><span class="crimson">The 13th Legion</span> is an Imperial military formation serving under the authority of <span class="crimson">Emperor Orenius Idolusius</span>. The Legion serves as an organized military force of the Empire carrying out Imperial Orders, defending Imperial interests, and maintaining order wherever it is deployed.</p>
           </div>
         </div>
       </div>
@@ -120,6 +114,8 @@
       </div>
     </section>
 
+    <div class="section-rule" aria-hidden="true"></div>
+
     <!-- ARCHIVES FEATURE -->
     <section class="section" id="archives-feature">
       <div class="container">
@@ -137,12 +133,60 @@
       </div>
     </section>
 
+    <div class="section-rule" aria-hidden="true"></div>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head center reveal">
+          <h2>Gallery</h2>
+          <p class="lede">The Legion's service, in pictures.</p>
+        </div>
+
+        <!--
+          HOW TO ADD PICTURES
+          Put image files in assets/img/gallery/, then replace the placeholder inside a
+          <div class="gallery-frame"> with:
+            <img src="assets/img/gallery/your-image.jpg" alt="Describe the picture" loading="lazy">
+          and replace the [Caption] text. The first picture is shown larger than the rest.
+        -->
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-item--wide reveal">
+            <div class="gallery-frame"><span class="gallery-placeholder">[Screenshot]</span></div>
+            <figcaption>[Caption]</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" data-delay="1">
+            <div class="gallery-frame"><span class="gallery-placeholder">[Screenshot]</span></div>
+            <figcaption>[Caption]</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" data-delay="2">
+            <div class="gallery-frame"><span class="gallery-placeholder">[Screenshot]</span></div>
+            <figcaption>[Caption]</figcaption>
+          </figure>
+          <figure class="gallery-item reveal">
+            <div class="gallery-frame"><span class="gallery-placeholder">[Screenshot]</span></div>
+            <figcaption>[Caption]</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" data-delay="1">
+            <div class="gallery-frame"><span class="gallery-placeholder">[Screenshot]</span></div>
+            <figcaption>[Caption]</figcaption>
+          </figure>
+          <figure class="gallery-item reveal" data-delay="2">
+            <div class="gallery-frame"><span class="gallery-placeholder">[Screenshot]</span></div>
+            <figcaption>[Caption]</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-rule" aria-hidden="true"></div>
+
     <!-- ROSTER CTA -->
     <section class="section cta-band">
       <div class="container reveal">
         <h2>Take the Oath</h2>
         <p class="lede">Join the Legion at the nearest garrison.</p>
-        <a class="btn btn--primary" href="roster.html">Go to the Roster</a>
+        <button class="btn btn--primary" type="button" data-open-oath aria-haspopup="dialog" aria-controls="oath-modal">Read the Oath</button>
       </div>
     </section>
   </main>
@@ -155,11 +199,25 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#high-command">High Command</a></li>
         <li><a href="archives.html">Archives</a></li>
+        <li><a href="hall-of-honor.html">Hall of Honor</a></li>
         <li><a href="roster.html">Roster</a></li>
       </ul>
       <p class="fine">&copy; <span id="year">2026</span> Legion XIII. A fan-made community site for the Keizaal Online roleplay server. The Elder Scrolls and Skyrim are trademarks of Bethesda Softworks LLC; this site is not affiliated with or endorsed by Bethesda.</p>
     </div>
   </footer>
+
+  <!-- THE OATH (opened by the "Read the Oath" button) -->
+  <dialog class="modal" id="oath-modal" aria-labelledby="oath-title">
+    <div class="modal-inner">
+      <button class="modal-close" type="button" data-close aria-label="Close the oath">&times;</button>
+      <h2 id="oath-title">The Legion Oath of Service</h2>
+      <p class="oath-note">Spoken after blessing by one of the Eight Divines</p>
+      <blockquote class="oath-text">
+        <p>&ldquo;I do solemnly swear to uphold the laws of the Empire. Before the Eight Divines and under the authority of the Ruby Throne, I bind my life and loyalty to the Empire of Tamriel and its Legion. I will obey the lawful commands of my officers, stand my post without fear, and fight the enemies of order, be they rebel, traitor, or invader. I swear to protect the citizens of the Empire, preserve peace and unity in its provinces, and serve with discipline, honor, and resolve, even unto death. By this oath, my life is given to the Legion, until my last breath, dismissed by those above me, or the end of the world. All hail the Empire, All hail the Emperor!&rdquo;</p>
+      </blockquote>
+      <p class="oath-after">Upon completion of this oath, the recruit is recognized as a <strong>Legionary of the Empire</strong>.</p>
+    </div>
+  </dialog>
 
   <script src="assets/js/main.js"></script>
 </body>
