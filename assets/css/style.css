@@ -959,6 +959,8 @@ p { margin: 0 0 1em; }
 }
 
 .doc-head .btn { margin-top: 1.75rem; }
+/* a link-only document card: no body text below the header, so no rule or gap under it */
+.manuscript--link .doc-head { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
 
 .notice {
   margin-bottom: 2rem;
@@ -1127,6 +1129,7 @@ h2, h3 { text-shadow: 0 1px 0 rgba(0, 0, 0, 0.65), 0 0 22px rgba(201, 164, 92, 0
   margin-inline: auto;
 }
 .honor-grid .dossier { display: flex; flex-direction: column; }
+.honor-grid[hidden] { display: none; }
 .dossier .citation {
   margin: 1rem 0 0;
   color: var(--muted);
@@ -1161,6 +1164,8 @@ h2, h3 { text-shadow: 0 1px 0 rgba(0, 0, 0, 0.65), 0 0 22px rgba(201, 164, 92, 0
   text-transform: uppercase;
   color: var(--gold);
 }
+/* with an odd number of entries, centre the last one on its own row */
+.memorial > .memorial-entry:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; }
 .epitaph { margin: 0; font-style: italic; color: var(--muted); }
 .fallen-closing {
   margin: clamp(2.5rem, 6vw, 4rem) 0 0;
