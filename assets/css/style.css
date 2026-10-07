@@ -863,8 +863,8 @@ p { margin: 0 0 1em; }
   text-align: center;
   padding-bottom: 2rem;
   margin-bottom: 2.25rem;
-  border-bottom: 1px solid rgba(201, 164, 92, 0.25);
 }
+
 .doc-head h2 { font-size: clamp(1.8rem, 1.2rem + 3vw, 3rem); letter-spacing: 0.12em; }
 .doc-head .subtitle {
   margin: 0.75rem 0 0;
