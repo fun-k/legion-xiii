@@ -10,14 +10,10 @@
   --card-2: #1c1613;
   --border: #2d2521;
   --border-lt: #46362c;
-  --leather-dk: #241a14;
-  --leather: #4a3222;
-  --leather-lt: #7d5638;
   --tan: #b8a583;
   --parchment: #e8e1d5;
   --muted: #9d9384;
   --faint: #7a7064;
-  --crimson-deep: #5e1010;
   --crimson: #9a1919;
   --crimson-lt: #b81e1e;
   --crimson-glow: #db2424;
@@ -494,7 +490,6 @@ p { margin: 0 0 1em; }
     0 0 40px rgba(219, 36, 36, 0.45);
 }
 
-
 .hero-subtitle {
   max-width: 640px;
   margin: 1rem auto 0;
@@ -543,14 +538,6 @@ p { margin: 0 0 1em; }
 .house-text .crimson { color: var(--crimson-lt); }
 .house-text p { margin: 0 0 1.25em; }
 .house-text p:last-child { margin-bottom: 0; }
-.house-text .verse {
-  margin-block: 1.75em;
-  padding-left: 1.25rem;
-  border-left: 2px solid var(--crimson);
-  font-style: italic;
-  color: var(--tan);
-  line-height: 1.8;
-}
 
 /* Cards share a flat, thin-bordered look */
 .dossier,
@@ -662,7 +649,6 @@ p { margin: 0 0 1em; }
     radial-gradient(ellipse 60% 70% at 50% 0%, rgba(154, 25, 25, 0.16), transparent 70%),
     linear-gradient(160deg, var(--card-2), var(--card));
 }
-
 
 .rank {
   margin-bottom: 0.5rem;
@@ -911,31 +897,6 @@ p { margin: 0 0 1em; }
 .notice strong { color: var(--red-text); font-family: var(--font-head); letter-spacing: 0.08em; font-weight: 600; }
 .notice code { color: var(--tan); }
 
-.doc-body { max-width: 68ch; margin-inline: auto; }
-.doc-body > p:first-of-type::first-letter,
-.doc-body .article:first-of-type p:first-of-type::first-letter {
-  float: left;
-  margin: 0.1em 0.12em 0 0;
-  font-family: var(--font-display);
-  font-size: 3.6em;
-  line-height: 0.8;
-  font-weight: 700;
-  color: var(--crimson-lt);
-}
-.article { margin-top: 2.25rem; }
-.article h3 {
-  display: flex;
-  align-items: baseline;
-  gap: 0.9rem;
-  margin-bottom: 0.9rem;
-  font-size: 1.05rem;
-  letter-spacing: 0.14em;
-}
-.article h3 .num { color: var(--crimson-lt); min-width: 2.6ch; }
-.article ol { padding-left: 1.4em; color: var(--parchment); }
-.article li { margin-bottom: 0.5em; }
-.article li::marker { color: var(--crimson); font-family: var(--font-head); }
-
 /* ---------- Roster ---------- */
 
 .roster-wrap { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
@@ -1023,7 +984,6 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 620px) {
   .command { grid-template-columns: 1fr; }
-  .article h3 { flex-direction: column; gap: 0.15rem; }
 }
 
 /* ---------- Candlelit library atmosphere: leather grain, dim corners, gilded headings ---------- */
@@ -1102,7 +1062,6 @@ h2, h3 { text-shadow: 0 1px 0 rgba(0, 0, 0, 0.65), 0 0 22px rgba(201, 164, 92, 0
 }
 /* with an odd number of entries, centre the last one on its own row */
 .memorial > .memorial-entry:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; }
-.epitaph { margin: 0; font-style: italic; color: var(--muted); }
 .fallen-closing {
   margin: clamp(2.5rem, 6vw, 4rem) 0 0;
   text-align: center;
