@@ -47,30 +47,18 @@
     items.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* Loading splash: shown once per browser session */
-  var loader = document.getElementById("loader");
-  if (loader) {
-    if (document.documentElement.classList.contains("no-splash") || reduceMotion) {
-      loader.remove();
-    } else {
-      var splashStart = Date.now();
-      var splashDone = false;
-      var hideSplash = function () {
-        if (splashDone) return;
-        splashDone = true;
-        loader.classList.add("fade-out");
-        try { sessionStorage.setItem("l13-splash", "1"); } catch (e) {}
-        setTimeout(function () { loader.remove(); }, 1000);
-      };
-      var scheduleHide = function () {
-        setTimeout(hideSplash, Math.max(0, 1600 - (Date.now() - splashStart)));
-      };
-      if (document.readyState === "complete") scheduleHide();
-      else window.addEventListener("load", scheduleHide);
-      setTimeout(hideSplash, 4000); /* failsafe if a font or frame is slow */
-    }
+  /* The oath modal (index.html): a native <dialog>, so Escape, focus trapping and
+     returning focus to the button are handled by the browser */
+  var oathBtn = document.querySelector("[data-open-oath]");
+  var oathDialog = document.getElementById("oath-modal");
+  if (oathBtn && oathDialog && typeof oathDialog.showModal === "function") {
+    oathBtn.addEventListener("click", function () { oathDialog.showModal(); });
+    oathDialog.addEventListener("click", function (e) {
+      if (e.target === oathDialog) oathDialog.close(); /* click on the dimmed backdrop */
+    });
+    oathDialog.querySelectorAll("[data-close]").forEach(function (b) {
+      b.addEventListener("click", function () { oathDialog.close(); });
+    });
   }
 
   /* Footer year */
